@@ -1,9 +1,12 @@
 import React from 'react'
 import './ListItem.css'
 
-const ListItem = () => {
+const ListItem = (props) => {
+
   return (
-    <div>
+    <div className='list-item'>
+    <p>{props.text}</p>
+    <button className='checkbox'></button>
       
     </div>
   )

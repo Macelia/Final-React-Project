@@ -1,10 +1,18 @@
 import React from 'react'
 import './TodoList.css'
+import ListItem from './ListItem'
 
-const TodoList = () => {
+const TodoList = ({todos}) => {
   return (
-    <div>
-        <h1> Ma To Do List </h1>
+    <div className='todo-list'>
+       {
+        todos.map((todo,index)=>{
+          return ( <ListItem  text={todo} key={index}/>)
+
+        })
+       }
+      
+       
       
     </div>
   )
